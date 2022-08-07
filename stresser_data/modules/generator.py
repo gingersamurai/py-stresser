@@ -14,11 +14,10 @@ def gen_decorator(func):
 
 
 @gen_decorator
-def gen_test() -> str:
+def base_gen() -> str:
     "генерирует случайный тест"
     a = random.randint(1, 10)
     b = random.randint(1, 10)
     res = f"{a} {b}"
     return res
-
 
