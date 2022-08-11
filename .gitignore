@@ -1,2 +1,5 @@
 *.out
-*__pycache__
+stresser_data/__pycache__
+stresser_data/modules/__pycache__
+solution.*
+dummy.*
