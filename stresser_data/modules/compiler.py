@@ -2,14 +2,15 @@ import os
 
 DLM = ("/" if os.name == 'posix' else '\\')
 
-def clean():
-    tests_path = f"stresser_data{DLM}tests"
-    for test_file in os.listdir(tests_path):
-        os.remove(f"{tests_path}{DLM}{test_file}")
-
-    files_path = f"stresser_data{DLM}files"
-    for file_file in os.listdir(files_path):
-        os.remove(f"{files_path}{DLM}{file_file}")
+def clean(files = False, tests = False):
+    if tests:
+        tests_path = f"stresser_data{DLM}tests"
+        for test_file in os.listdir(tests_path):
+            os.remove(f"{tests_path}{DLM}{test_file}")
+    if files:
+        files_path = f"stresser_data{DLM}files"
+        for file_file in os.listdir(files_path):
+            os.remove(f"{files_path}{DLM}{file_file}")
 
 def compile(path: str, type: str):
     """
@@ -57,7 +58,6 @@ def compile(path: str, type: str):
         else:
             out_path = ''
         os.system(f"{launcher} {respath} {in_path} {out_path}")
-        # print(f"{launcher} {respath} {in_path} {out_path}")
     
     return launch
 

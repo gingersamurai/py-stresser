@@ -6,7 +6,6 @@ def my_gen():
     res = ""
 
     n = random.randint(1, 10)
-    n = 5
     res += f'{n}\n'
     for i in range(n):
         x = random.randint(1, 10)

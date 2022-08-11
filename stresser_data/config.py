@@ -17,3 +17,5 @@ GEN_TEST = custom_funcs.my_gen
 CHECK_TEST = checker.base_check
 
 TEST_CNT = 100
+
+SAVE_TESTS = False

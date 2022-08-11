@@ -2,7 +2,9 @@ import os
 from stresser_data.config import *
 from stresser_data.modules import *
 
-clean()
+if not os.path.exists(f"stresser_data{DLM}tests"):
+    os.mkdir(f"stresser_data{DLM}tests")
+clean(tests=True, files=True)
 
 launch_solution = compile(SOLUTION_PATH, "solution")
 launch_dummy = compile(DUMMY_PATH, "dummy")
@@ -27,13 +29,24 @@ for test_num in range(1, TEST_CNT):
     f_solution_out = open(solution_out_path, "r")
     solution_out = f_solution_out.read()
     f_solution_out.close()
+    
+    if not SAVE_TESTS:
+        clean(tests=True)
 
     if CHECK_TEST(dummy_out, solution_out) == True:
         print(f"test {test_num} OK")
     else:
         print(f"test {test_num} WA")
+        print("-" * 30)
+        print("INPUT:")
+        print(GEN_TEST(test_num))
+        print("-" * 20)
         print("RIGHT:")
         print(dummy_out)
+        print("-" * 20)
         print("WRONG:")
         print(solution_out)
+        print("-" * 30)
         break
+
+clean(files=True)
