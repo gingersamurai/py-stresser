@@ -2,8 +2,11 @@ import os
 from stresser_data.config import *
 from stresser_data.modules import *
 
+if not os.path.exists(f"stresser_data{DLM}files"):
+    os.mkdir(f"stresser_data{DLM}files")
 if not os.path.exists(f"stresser_data{DLM}tests"):
     os.mkdir(f"stresser_data{DLM}tests")
+
 clean(tests=True, files=True)
 
 launch_solution = compile(SOLUTION_PATH, "solution")
