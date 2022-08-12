@@ -3,4 +3,4 @@
 /stresser_data/modules/__pycache__/*
 solution.*
 dummy.*
-.vscode
+/.vscode
