@@ -1,6 +1,17 @@
+"""
+файл в котором пользователь может 
+написать свои кастомные функции
+для генерации и проверки
+"""
+
+# декоратор для корректной работы функций для генерации
 from stresser_data.modules.generator import gen_decorator
+
 import random
 
+
+# пример функции для генерации
+# функция генерирует набор чисел
 @gen_decorator
 def my_gen():
     res = ""
@@ -12,13 +23,3 @@ def my_gen():
         res += f'{x} '
 
     return res
-
-
-
-
-
-
-if __name__ == '__main__':
-    print("START testing custom_funcs.py:")
-    print(my_gen())
-    print("FINISH testing custom_funcs.py:")

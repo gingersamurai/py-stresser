@@ -1,7 +1,7 @@
 from functools import wraps
 import random
 
-
+# декоратор для корректной работы функции 
 def gen_decorator(func):
     
     @wraps(func)
@@ -13,6 +13,8 @@ def gen_decorator(func):
     return inner
 
 
+# стандартная функция герератор
+# генерирует 2 случайных числа
 @gen_decorator
 def base_gen() -> str:
     "генерирует случайный тест"

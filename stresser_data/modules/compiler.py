@@ -1,7 +1,9 @@
 import os
 
+# выбираем разделитель в зависимости от ОС
 DLM = ("/" if os.name == 'posix' else '\\')
 
+# очищение файлов
 def clean(files = False, tests = False):
     if tests:
         tests_path = f"stresser_data{DLM}tests"
@@ -12,6 +14,7 @@ def clean(files = False, tests = False):
         for file_file in os.listdir(files_path):
             os.remove(f"{files_path}{DLM}{file_file}")
 
+# компиляция файла и возвращение функции запуска
 def compile(path: str, type: str):
     """
     compile file in path and return launch function \\
