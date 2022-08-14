@@ -1,4 +1,4 @@
-solution.*
-dummy.*
+solution*
+dummy*
 modules/__pycache__/*
 /.vscode/*
