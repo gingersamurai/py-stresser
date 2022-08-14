@@ -8,35 +8,35 @@ def validate(in_data: dict):
         if not os.path.isabs(in_data[now_path]):
             in_data[now_path] = os.path.abspath(in_data[now_path])
         assert os.path.isfile(in_data[now_path]), f"{in_data[now_path]} not such file"
-    assert ('NTESTS' in in_data and type(in_data["NTESTS"]) == int and in_data["NTESTS"] > 0), "NTESTS must be positive integer"
-    assert ('save_tests' in in_data)
+    assert ('NTESTS' in in_data) and (type(in_data["NTESTS"]) == int) and (in_data["NTESTS"] > 0), "NTESTS must be positive integer"
+    assert ('SAVE_TESTS' in in_data), "must be SAVE_TESTS (true/false)"
+    assert ('CHECKER_TYPE' in in_data) and (in_data['CHECKER_TYPE'] in ['base', 'base_with_format']), "wrong CHECKER_TYPE"
 
 
 def parse_input() -> dict:
     parser = ArgumentParser()
 
-    parser.add_argument("-c", "--config_path")
+    parser.add_argument("-c", "--CONFIG_PATH")
     parser.add_argument("-S", "--SOLUTION_PATH")
     parser.add_argument("-D", "--DUMMY_PATH")
     parser.add_argument("-G", "--GENERATOR_PATH")
     parser.add_argument("-N", "--NTESTS", type=int)
-    parser.add_argument("-s", "--save_tests", action="store_true")
+    parser.add_argument("-s", "--SAVE_TESTS", action="store_true")
+    parser.add_argument("-t", "--CHECKER_TYPE")
     args = parser.parse_args()
     res_dict = {}
-    if args.config_path == None:
+    if args.CONFIG_PATH == None:
         res_dict = vars(args)
-        res_dict.pop('config_path')
+        res_dict.pop('CONFIG_PATH')
     else:
         config = ConfigParser()
         config.optionxform = str
-        config.read(os.path.abspath(args.config_path))
+        config.read(os.path.abspath(args.CONFIG_PATH))
         res_dict = (dict(config['settings']))
         res_dict['NTESTS'] = config.getint('settings', 'NTESTS')
-        res_dict['save_tests'] = config.getboolean('settings', 'save_tests')
+        res_dict['SAVE_TESTS'] = config.getboolean('settings', 'SAVE_TESTS')
+    validate(res_dict)
     return res_dict
 
 if __name__ == "__main__":
-    in_data = parse_input()
-    print(in_data, "\n\n\n")
-    validate(in_data)
-    print(in_data)
+    print(parse_input())
