@@ -13,7 +13,7 @@ def clean(files = False, tests = False):
             os.remove(f"{files_path}{os.sep}{file_file}")
 
 # компиляция файла и возвращение функции запуска
-def compile(path: str, type: str, flags: str = ""):
+def get_launcher(path: str, type: str, flags: str = ""):
     exst = path[path.find('.'):]
     respath = f"stresser_data{os.sep}files{os.sep}{type}"
     launcher: str
