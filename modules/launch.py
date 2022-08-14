@@ -56,4 +56,3 @@ def get_launcher(path: str, type: str, flags: str = ""):
     
     return launch
 
-print(f'{os.getcwd()}{os.sep}{sys.argv[1]}')
