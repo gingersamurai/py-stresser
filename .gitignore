@@ -1,4 +1,2 @@
-/stresser.py
-dummy*
-modules/__pycache__/*
-/.vscode/*
+dummy.*
+solution.*
