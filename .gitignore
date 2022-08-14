@@ -3,3 +3,4 @@ dummy.*
 solution.*
 generator.*
 *.ini
+/modules/__pycache__/*
