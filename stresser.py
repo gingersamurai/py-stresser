@@ -75,4 +75,3 @@ WRONG:
         break
 
 
-clean(files=True)
