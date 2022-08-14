@@ -34,9 +34,6 @@
 
 ## установка и использование
 
-<<<<<<< HEAD
-*coming soon*
-=======
 + **копируем репозиторий на компьютер**
 ```
 git clone https://github.com/gingersamurai/stresser
@@ -59,9 +56,6 @@ cd stresser
     python stresser.py
     ```
 в репозитории уже есть пример программ для тестирования
-
-
->>>>>>> master
 
 ---
 
