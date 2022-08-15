@@ -31,6 +31,8 @@ elif CHECKER_TYPE == 'base_with_format':
 
 
 for test_num in range(1, NTESTS + 1):
+    if not SAVE_TESTS:
+        clean(tests=True)
     test_path = f"stresser_data{os.sep}tests{os.sep}{test_num}_in.txt"
     dummy_out_path = f"stresser_data{os.sep}tests{os.sep}{test_num}_out_dummy.txt"
     solution_out_path = f"stresser_data{os.sep}tests{os.sep}{test_num}_out_solution.txt"
@@ -47,8 +49,7 @@ for test_num in range(1, NTESTS + 1):
     solution_out = f_solution_out.read()
     f_solution_out.close()
 
-    if not SAVE_TESTS:
-        clean(tests=True)
+    
 
     if cur_checker(dummy_out, solution_out):
         print(f"test {test_num} OK")
