@@ -31,9 +31,9 @@ elif CHECKER_TYPE == 'base_with_format':
 
 
 for test_num in range(1, NTESTS + 1):
-    test_path = f"stresser_data{os.sep}tests{os.sep}{test_num}_in_.txt"
-    dummy_out_path = f"stresser_data{os.sep}tests{os.sep}{test_num}_dummy_out_.txt"
-    solution_out_path = f"stresser_data{os.sep}tests{os.sep}{test_num}_solution_out_.txt"
+    test_path = f"stresser_data{os.sep}tests{os.sep}{test_num}_in.txt"
+    dummy_out_path = f"stresser_data{os.sep}tests{os.sep}{test_num}_dummy_out.txt"
+    solution_out_path = f"stresser_data{os.sep}tests{os.sep}{test_num}_solution_out.txt"
 
     launch_generator(out_path=test_path, flags=str(test_num))
     launch_dummy(test_path, dummy_out_path)

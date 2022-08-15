@@ -4,4 +4,4 @@ solution.*
 generator.*
 *.ini
 /modules/__pycache__/*
-/stressser_data/*
+/stresser_data/*
