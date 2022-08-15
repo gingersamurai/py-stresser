@@ -18,14 +18,16 @@ def validate(in_data: dict):
 def parse_input() -> dict:
     parser = ArgumentParser()
 
-    parser.add_argument("-c", "--CONFIG_PATH", help="path to config.\
-    If set, args will ge gotten from config")
-    parser.add_argument("-S", "--SOLUTION_PATH", help="path to code with mistakes")
-    parser.add_argument("-D", "--DUMMY_PATH", help="path to code without mistakes")
-    parser.add_argument("-G", "--GENERATOR_PATH", help="path to programm generates text data to stdout")
-    parser.add_argument("-N", "--NTESTS", type=int, help="count of tests")
-    parser.add_argument("-s", "--SAVE_TESTS", action="store_true", help="if set, test will be saved")
-    parser.add_argument("-t", "--CHECKER_TYPE", help=f"values: {CHECKER_TYPES}")
+    parser.add_argument("-c", "--CONFIG_PATH", help="путь к конфигурационному файлу.\
+    Если прописан, то все аргументы будут браться из него")
+    parser.add_argument("-S", "--SOLUTION_PATH", help="путь к решению с ошибками")
+    parser.add_argument("-D", "--DUMMY_PATH", help="путь к правильному решению")
+    parser.add_argument("-G", "--GENERATOR_PATH", help="путь к программе, которая генерирует данные в stdout")
+    parser.add_argument("-N", "--NTESTS", type=int, help="необходимое количество тестов")
+    parser.add_argument("-s", "--SAVE_TESTS", action="store_true", help="если прописан, то \
+    все пройденные тесты буду сохраняться")
+    parser.add_argument("-t", "--CHECKER_TYPE", help=f"тип чекера.\
+    варианты: {CHECKER_TYPES}")
     args = parser.parse_args()
     res_dict = {}
     if args.CONFIG_PATH == None:
