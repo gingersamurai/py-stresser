@@ -63,6 +63,8 @@ git checkout develop
 конфигуруционный файл должен быть в формате .ini \
 все данные хранятся в секции `[settings]`
 
+## пример работы
+пример работы программы можно посмотреть [тут](https://drive.google.com/file/d/1nbGNT3kdivMwluu9zeI0xQV4J0nSoVTU/view?usp=sharing)
 
 **автор:** *@gingersamurai*
 
