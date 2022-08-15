@@ -75,4 +75,4 @@ WRONG:
         break
 
 if not SAVE_TESTS:
-            clean(files=True, tests=True)
+    clean(files=True, tests=True)
