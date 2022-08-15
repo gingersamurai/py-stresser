@@ -15,7 +15,7 @@ if not os.path.exists('stresser_data'):
 if not os.path.exists(f"stresser_data{os.sep}files"):
     os.mkdir(f"stresser_data{os.sep}files")
 if not os.path.exists(f"stresser_data{os.sep}tests"):
-        os.mkdir(f"stresser_data{os.sep}tests")
+    os.mkdir(f"stresser_data{os.sep}tests")
 clean(tests=True, files=True)
 
 
@@ -49,15 +49,13 @@ for test_num in range(1, NTESTS + 1):
 
     if not SAVE_TESTS:
         clean(tests=True)
-    
-    
-    
-    if cur_checker(dummy_out, solution_out) == True:
+
+    if cur_checker(dummy_out, solution_out):
         print(f"test {test_num} OK")
     else:
         target_test = open(test_path)
         print(
-    f"""
+            f"""
 test {test_num} WA
 ------------------------------
 INPUT:
@@ -73,5 +71,3 @@ WRONG:
         )
         target_test.close()
         break
-
-
