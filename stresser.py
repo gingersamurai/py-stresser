@@ -72,6 +72,7 @@ WRONG:
     """
         )
         target_test.close()
-        if not SAVE_TESTS:
-            clean(files=True, tests=True)
         break
+
+if not SAVE_TESTS:
+            clean(files=True, tests=True)
