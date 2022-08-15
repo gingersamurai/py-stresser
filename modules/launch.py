@@ -11,6 +11,10 @@ def clean(files = False, tests = False):
         files_path = f"stresser_data{os.sep}files"
         for file_file in os.listdir(files_path):
             os.remove(f"{files_path}{os.sep}{file_file}")
+    if files and tests:
+        os.rmdir(f"stresser_data{os.sep}tests")
+        os.rmdir(f"stresser_data{os.sep}files")
+        os.rmdir("stresser_data")
 
 # компиляция файла и возвращение функции запуска
 def get_launcher(path: str, type: str, flags: str = ""):

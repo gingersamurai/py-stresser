@@ -16,7 +16,8 @@ if not os.path.exists(f"stresser_data{os.sep}files"):
     os.mkdir(f"stresser_data{os.sep}files")
 if not os.path.exists(f"stresser_data{os.sep}tests"):
     os.mkdir(f"stresser_data{os.sep}tests")
-clean(tests=True, files=True)
+clean(tests=True)
+clean(files=True)
 
 
 launch_solution = get_launcher(SOLUTION_PATH, "solution")
@@ -71,4 +72,6 @@ WRONG:
     """
         )
         target_test.close()
+        if not SAVE_TESTS:
+            clean(files=True, tests=True)
         break
