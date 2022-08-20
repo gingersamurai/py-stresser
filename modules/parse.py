@@ -25,7 +25,7 @@ def parse_input() -> dict:
     parser.add_argument("-G", "--GENERATOR_PATH", help="путь к программе, которая генерирует данные в stdout")
     parser.add_argument("-N", "--NTESTS", type=int, help="необходимое количество тестов")
     parser.add_argument("-s", "--SAVE_TESTS", action="store_true", help="если прописан, то \
-    все пройденные тесты буду сохраняться")
+    все пройденные тесты будут сохраняться")
     parser.add_argument("-t", "--CHECKER_TYPE", help=f"тип чекера.\
     варианты: {CHECKER_TYPES}")
     args = parser.parse_args()

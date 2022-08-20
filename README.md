@@ -35,10 +35,7 @@ git clone https://github.com/gingersamurai/stresser
 ```
 cd stresser
 ```
-+ **переключаемся на ветку develop**
-```
-git checkout develop
-```
+
 + **запускаем `stresser.py` с нужными нам аргументами** \
     список аргументов:
     
