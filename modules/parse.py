@@ -42,6 +42,3 @@ def parse_input() -> dict:
         res_dict['SAVE_TESTS'] = config.getboolean('settings', 'SAVE_TESTS')
     validate(res_dict)
     return res_dict
-
-if __name__ == "__main__":
-    print(parse_input())
