@@ -54,7 +54,7 @@ git checkout develop
                             путь к программе, которая генерирует данные в stdout
     -N NTESTS, --NTESTS NTESTS
                             необходимое количество тестов
-    -s, --SAVE_TESTS      если прописан, то все пройденные тесты буду сохраняться
+    -s, --SAVE_TESTS      если прописан, то все пройденные тесты будут сохраняться
     -t CHECKER_TYPE, --CHECKER_TYPE CHECKER_TYPE
                             тип чекера. варианты: ['base', 'base_with_format']
     ```
