@@ -39,7 +39,7 @@ def parse_input() -> dict:
     parser.add_argument("-D", "--DUMMY_PATH", help="путь к правильному решению")
     parser.add_argument("-G", "--GENERATOR_PATH", help="путь к программе, которая генерирует данные в stdout")
     parser.add_argument("-N", "--NTESTS", type=int, help="необходимое количество тестов. Базовое значение: 10000")
-    parser.add_argument("-s", "--SAVE_TESTS", help="сохранять ли тесты. варианты: true/false")
+    parser.add_argument("-s", "--SAVE_TESTS", help="сохранять ли тесты. варианты: true/false. Базовое значение: false")
     parser.add_argument("-t", "--CHECKER_TYPE", help=f"тип чекера.\
     варианты: {CHECKER_TYPES} Базовое значение: base_with_format")
     args = parser.parse_args()

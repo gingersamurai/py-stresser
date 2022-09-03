@@ -50,10 +50,11 @@ cd stresser
     -G GENERATOR_PATH, --GENERATOR_PATH GENERATOR_PATH
                             путь к программе, которая генерирует данные в stdout
     -N NTESTS, --NTESTS NTESTS
-                            необходимое количество тестов
-    -s, --SAVE_TESTS      если прописан, то все пройденные тесты будут сохраняться
+                            необходимое количество тестов. Базовое значение: 10000
+    -s SAVE_TESTS, --SAVE_TESTS SAVE_TESTS
+                            сохранять ли тесты. варианты: True/False. Базовое значение: false
     -t CHECKER_TYPE, --CHECKER_TYPE CHECKER_TYPE
-                            тип чекера. варианты: ['base', 'base_with_format']
+                            тип чекера. варианты: ['base', 'base_with_format'] Базовое значение: base_with_format
     ```
 ---
 ## использования конфигурационного файла
