@@ -2,6 +2,7 @@
 dummy.*
 solution.*
 generator.*
+sb.*
 *.ini
 /modules/__pycache__/*
 /stresser_data/*
