@@ -52,8 +52,8 @@ def parse_input() -> dict:
         config.optionxform = str
         config.read(os.path.abspath(args.CONFIG_PATH))
         res_dict = (dict(config['settings']))
-        res_dict['NTESTS'] = config.getint('settings', 'NTESTS')
-        res_dict['SAVE_TESTS'] = config.getboolean('settings', 'SAVE_TESTS')
+        # res_dict['NTESTS'] = config.getint('settings', 'NTESTS')
+        # res_dict['SAVE_TESTS'] = config.getboolean('settings', 'SAVE_TESTS')
     res_dict = set_default(res_dict)
     validate(res_dict)
     return res_dict
