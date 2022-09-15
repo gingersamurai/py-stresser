@@ -6,7 +6,7 @@ with open("README.md") as file:
 
 setup(
     name='py-stresser',
-    version='2.0.0b1',
+    version='2.0.0b2',
     author='gingersamurai',
     author_email='nazimmalyshev47@gmail.com',
     description='package for stress testing',
