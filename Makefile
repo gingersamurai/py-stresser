@@ -1,11 +1,12 @@
 HOST = gingersamurai@192.168.1.10
 
-all: local_test deploy_test push clean
+all: local_test deploy_test clean
+
 
 update: clean
-	pip uninstall -y py-stresser
-	python3 setup.py sdist
-	pip install dist/*
+	pip uninstall -y py-stresser >/dev/null
+	python3 setup.py sdist > /dev/null
+	pip install dist/* > /dev/null
 
 local_test: update
 	python3 test/test.py

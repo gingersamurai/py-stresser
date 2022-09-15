@@ -1,0 +1,2 @@
+[console_scripts]
+stresser = stresser.__main__:main

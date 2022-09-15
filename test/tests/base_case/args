@@ -1,1 +1,1 @@
--S solution.py -D dummy.py -G generator.py
+-S solution.py -D dummy.py -G generator.py -s True

@@ -1,3 +1,12 @@
+Metadata-Version: 2.1
+Name: py-stresser
+Version: 2.0.0b1
+Summary: package for stress testing
+Home-page: https://github.com/gingersamurai/stresser
+Author: gingersamurai
+Author-email: nazimmalyshev47@gmail.com
+Description-Content-Type: text/markdown
+
 ## py-stresser
 Данная программа предназначенна для 
 стресс-тестирования различных файлов. \

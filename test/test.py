@@ -15,4 +15,4 @@ for now_case in os.listdir('.'):
     os.system(f'stresser {args}')
     print(F"\n\n\n{'_'*20}[{now_case}] FINISH TESTING{'_'*20}\n\n\n")
 
-print(f"DONE {cnt} testcases")
+print(f"DONE {cnt} testcases\n\n\n\n\n")

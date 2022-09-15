@@ -11,9 +11,9 @@ def main():
     NTESTS = my_config['NTESTS']
     SAVE_TESTS = my_config['SAVE_TESTS']
     CHECKER_TYPE = my_config['CHECKER_TYPE']
-
     if not os.path.exists('stresser_data'):
         os.mkdir('stresser_data')
+        
     if not os.path.exists(f"stresser_data{os.sep}files"):
         os.mkdir(f"stresser_data{os.sep}files")
     if not os.path.exists(f"stresser_data{os.sep}tests"):
@@ -78,6 +78,7 @@ def main():
 
     if not SAVE_TESTS:
         clean(files=True, tests=True)
+    
 
 
 if __name__ == '__main__':
