@@ -5,13 +5,15 @@ from configparser import ConfigParser
 CHECKER_TYPES = ['base', 'base_with_format']
 
 def validate(in_data: dict):
+    
     for now_path in ['SOLUTION_PATH', 'DUMMY_PATH', 'GENERATOR_PATH']:
         assert (in_data[now_path] != None), f"there is not {now_path}"
         # if not os.path.isabs(in_data[now_path]):
         #     in_data[now_path] = os.path.abspath(in_data[now_path])
+
         assert os.path.isfile(in_data[now_path]), in_data[now_path] + ': not such file'
-    
-    assert (type(in_data["NTESTS"]) == int) and (in_data["NTESTS"] > 0), "NTESTS must be positive integer"
+    in_data['NTESTS'] = int(in_data['NTESTS'])
+    assert (in_data["NTESTS"] > 0), "NTESTS must be positive integer"
     assert (in_data['CHECKER_TYPE'] in CHECKER_TYPES), "wrong CHECKER_TYPE"
 
 def set_default(in_data: dict):
@@ -52,8 +54,6 @@ def parse_input() -> dict:
         config.optionxform = str
         config.read(os.path.abspath(args.CONFIG_PATH))
         res_dict = (dict(config['settings']))
-        # res_dict['NTESTS'] = config.getint('settings', 'NTESTS')
-        # res_dict['SAVE_TESTS'] = config.getboolean('settings', 'SAVE_TESTS')
     res_dict = set_default(res_dict)
     validate(res_dict)
     return res_dict
