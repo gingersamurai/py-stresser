@@ -54,7 +54,7 @@ pip install py-stresser
 ---
 
 ## пример работы
-coming soon
+пример работы можете посмотреть [тут](https://drive.google.com/file/d/167N40B531WfLiR9Ge4Z5qmFb__d_OU9v/view?usp=sharing)
 
 ---
 ## исходный код
