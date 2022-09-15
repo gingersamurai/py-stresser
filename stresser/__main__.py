@@ -1,5 +1,5 @@
 import os
-from modules import *
+from stresser.modules import *
 
 my_config = parse_input()
 
