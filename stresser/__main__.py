@@ -58,24 +58,24 @@ def main():
             print(f"test {test_num} OK")
         else:
             target_test = open(test_path)
-            print(
-                f"""
-    test {test_num} WA
-    ------------------------------
-    INPUT:
-    {target_test.read()}
-    --------------------
-    RIGHT:
-    {dummy_out}
-    --------------------
-    WRONG:
-    {solution_out}
-    ------------------------------
-        """
+            print(f"""
+test {test_num} WA
+------------------------------
+INPUT:
+------
+{target_test.read()}
+--------------------
+RIGHT:
+------
+{dummy_out}
+--------------------
+WRONG:
+{solution_out}
+------------------------------
+"""
             )
             target_test.close()
             break
-
     if not SAVE_TESTS:
         clean(files=True, tests=True)
     
