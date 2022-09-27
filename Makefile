@@ -1,6 +1,6 @@
 HOST = gingersamurai@192.168.1.10
 
-all: local_test deploy_test clean
+all: local_test clean deploy_test 
 
 
 update: clean
